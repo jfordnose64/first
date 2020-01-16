@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:first/app.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       initialRoute: '/',
       routes: {
-        '/': (context) => FirstPage(),
+        '/': (context) => App(),
         '/second': (context) => SecondScreen(),
         '/third': (context) => ThirdPage(),
       },
@@ -91,19 +92,27 @@ class SecondScreen extends StatelessWidget {
 class ThirdPage extends StatefulBuilder {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        children: <Widget>[
-          Text('Hello Page'),
-          RaisedButton(
-            child: Text('Home'),
-            onPressed: () {
-              Navigator.pushNamed(context, '/');
-            },
-          )
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Third Page'),
+      ),
+      body: Center(
+        child: Text('this is a text thing'),
       ),
     );
+    // return Center(
+    //   child: Column(
+    //     children: <Widget>[
+    //       Text('Hello Page'),
+    //       RaisedButton(
+    //         child: Text('Home'),
+    //         onPressed: () {
+    //           Navigator.pushNamed(context, '/');
+    //         },
+    //       )
+    //     ],
+    //   ),
+    // );
   }
 }
 
