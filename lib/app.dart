@@ -5,7 +5,10 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Home(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Home(),
+      },
       theme: ThemeData(
           primarySwatch: Colors.blueGrey,
           brightness: Brightness.dark,
