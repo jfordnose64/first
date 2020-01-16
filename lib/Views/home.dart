@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'text_section.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -11,18 +12,13 @@ class Home extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-              decoration: BoxDecoration(color: Colors.red),
-              child: Text('Yes'),
-            ),
-            Container(
-              decoration: BoxDecoration(color: Colors.blue),
-              child: Text('No'),
-            ),
-            Container(
-              decoration: BoxDecoration(color: Colors.green),
-              child: Text('Maybe'),
-            ),
+            TextSection(Colors.red),
+            TextSection(Colors.green),
+            TextSection(Colors.blue),
+            Text(
+              'Hello World',
+              textAlign: TextAlign.center,
+            )
           ],
         ));
   }
