@@ -1,6 +1,6 @@
 import 'package:first/Views/second_page.dart';
+import 'package:first/main.dart';
 import 'package:flutter/material.dart';
-import 'text_section.dart';
 import '../placeholder_widget.dart';
 
 class Home extends StatefulWidget {
@@ -10,11 +10,13 @@ class Home extends StatefulWidget {
   }
 }
 
+//API KEY === 'AIzaSyCcaOCYZc1DOhhjNEoWxIWlIpq9sPHC1Ew'
+
 class _HomeState extends State<Home> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    PlaceholderWidget(Colors.white),
-    PlaceholderWidget(Colors.deepOrange),
+    PlaceholderWidget(Colors.green),
+    PlaceholderWidget(Colors.red),
     SecondPage()
     // PlaceholderWidget(Colors.green)
   ];
@@ -33,9 +35,9 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(this.CreateTitle()),
-      ),
+      // appBar: AppBar(
+      //   title: Text(this.CreateTitle()),
+      // ),
       body: _children[_currentIndex], // new
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
@@ -44,23 +46,10 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
               icon: new Icon(Icons.home), title: new Text('Home')),
           BottomNavigationBarItem(
-              icon: new Icon(Icons.mail), title: new Text('Mail')),
+              icon: new Icon(Icons.map), title: new Text('Map')),
           BottomNavigationBarItem(
               icon: new Icon(Icons.person), title: new Text('Account'))
         ],
-        // ),
-        // body: Column(
-        //   mainAxisAlignment: MainAxisAlignment.start,
-        //   crossAxisAlignment: CrossAxisAlignment.stretch,
-        //   children: <Widget>[
-        //     TextSection(Colors.red),
-        //     TextSection(Colors.green),
-        //     TextSection(Colors.blue),
-        //     Text(
-        //       'Hello World',
-        //       textAlign: TextAlign.center,
-        //     ),
-        //   ],
       ),
     );
   }
