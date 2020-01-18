@@ -16,9 +16,9 @@ class _HomeState extends State<Home> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     PlaceholderWidget(Colors.green),
-    PlaceholderWidget(Colors.red),
-    SecondPage()
-    // PlaceholderWidget(Colors.green)
+    // ThirdPage(),
+    SecondPage(),
+    PlaceholderWidget(Colors.green)
   ];
   String name = 'Bond';
 

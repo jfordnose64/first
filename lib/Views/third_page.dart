@@ -1,35 +1,44 @@
 import 'package:flutter/material.dart';
 
-class ThirdPage extends StatelessWidget {
-  ThirdPage({Key key}) : super(key: key);
-
+class ThirdPage extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Card(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            const ListTile(
-              leading: Icon(Icons.album),
-              title: Text('The Enchanted Nightingale'),
-              subtitle: Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
-            ),
-            ButtonBar(
-              children: <Widget>[
-                FlatButton(
-                  child: const Text('BUY TICKETS'),
-                  onPressed: () {/* ... */},
-                ),
-                FlatButton(
-                  child: const Text('LISTEN'),
-                  onPressed: () {/* ... */},
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+State<StatefulWidget> createState(){
+  return _ThirdState();
 }
+}
+
+
+
+    class _ThirdState extends State<ThirdPage> {
+      @override
+
+       TextEditingController _controller;
+
+
+      Widget build (BuildContext context){
+        Scaffold(
+      body: Center(child: TextField(
+        controller: _controller,
+        onSubmitted: (String value) async{
+          await showDialog<void>(
+            context: context,
+            builder: (BuildContext context){
+              return AlertDialog(
+                title: const Text('Thanks!'),
+                content: Text('You typed "$value".'),
+                actions: <Widget>[
+                    FlatButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Text('OK'),
+                    ),
+                  ],
+              )
+            }
+          )
+        },
+      ),),
+    )
+      }
+    }

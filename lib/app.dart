@@ -13,7 +13,7 @@ class App extends StatelessWidget {
           primarySwatch: Colors.blueGrey,
           brightness: Brightness.dark,
           primaryColor: Colors.grey,
-          accentColor: Colors.red),
+          accentColor: Colors.blue),
     );
   }
 }
