@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
     SecondPage(),
     PlaceholderWidget(Colors.green)
   ];
-  String name = 'Bond';
+  String name = 'Yes';
 
   String CreateTitle() {
     return "The name is " + this.name;
