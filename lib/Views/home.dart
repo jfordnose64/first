@@ -1,6 +1,7 @@
 import 'package:first/Views/second_page.dart';
-import 'package:first/main.dart';
+// import 'package:first/main.dart';
 import 'package:flutter/material.dart';
+import 'package:first/Views/third_page.dart';
 import '../placeholder_widget.dart';
 
 class Home extends StatefulWidget {
@@ -10,15 +11,13 @@ class Home extends StatefulWidget {
   }
 }
 
-//API KEY === 'AIzaSyCcaOCYZc1DOhhjNEoWxIWlIpq9sPHC1Ew'
-
 class _HomeState extends State<Home> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     PlaceholderWidget(Colors.green),
-    // ThirdPage(),
     SecondPage(),
-    PlaceholderWidget(Colors.green)
+    ThirdPage(),
+    // PlaceholderWidget(Colors.green)
   ];
   String name = 'Yes';
 
