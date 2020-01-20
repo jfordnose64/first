@@ -19,6 +19,7 @@ class _ThirdState extends State<ThirdPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
+              Text('Sign Up'),
               TextField(
                 obscureText: false,
                 decoration: InputDecoration(
