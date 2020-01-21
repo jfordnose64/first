@@ -1,7 +1,8 @@
+// import 'package:first/Views/first_page.dart';
 import 'package:first/Views/second_page.dart';
+import 'package:first/Views/third_page.dart';
 // import 'package:first/main.dart';
 import 'package:flutter/material.dart';
-import 'package:first/Views/third_page.dart';
 import '../placeholder_widget.dart';
 
 class Home extends StatefulWidget {
@@ -17,6 +18,7 @@ class _HomeState extends State<Home> {
     PlaceholderWidget(Colors.green),
     SecondPage(),
     ThirdPage(),
+    // FirstPage(),
     // PlaceholderWidget(Colors.green)
   ];
   String name = 'Yes';

@@ -4,7 +4,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 class SecondPage extends StatelessWidget {
   GoogleMapController mapController;
 
-  LatLng _center = const LatLng(45.521563, -122.677433);
+  LatLng _center = const LatLng(27.850409040866424, -82.6863281428814);
 
   void _onMapCreated(GoogleMapController controller) {
     mapController = controller;
