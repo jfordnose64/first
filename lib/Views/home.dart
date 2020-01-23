@@ -15,7 +15,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    PlaceholderWidget(Colors.green),
+    PlaceholderWidget(Colors.yellow),
     SecondPage(),
     ThirdPage(),
     // FirstPage(),
